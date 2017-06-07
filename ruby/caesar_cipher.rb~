@@ -1,0 +1,6 @@
+def caesar_cipher(str, shift)
+# Determine the start number for both upper and lower-case letters
+# Check case of each letter.    
+# The number of each letter, before conversion with the shift factor, is their ord - start, A  is 0.
+# if letter + shift > 26, letter = (ord(letter) + shift) / 26
+else chr(letter)
