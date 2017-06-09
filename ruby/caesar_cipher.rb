@@ -1,4 +1,4 @@
-# Caesar Cipher from the Odin Project curriculum: 
+# Caesar Cipher from the Odin Project curriculum:  https://www.theodinproject.com/courses/ruby-programming/lessons/building-blocks?ref=lnav
 # Determine whether a character is a letter
 def letter?(char)
  char[/[a-zA-Z]/] == char
