@@ -1,6 +1,0 @@
-# From the Odin Project curriculum: https://www.theodinproject.com/courses/ruby-programming/lessons/building-blocks
-# Takes in an array of stock prices
-# Returns the best day to buy and the best day to sell
-# An array that starts from 0
-# A stock price for each day
-# Returns the best day to buy and the best day to sell
