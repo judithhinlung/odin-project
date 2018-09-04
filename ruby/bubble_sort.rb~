@@ -13,5 +13,8 @@ def bubble_sort(x)
     end
     i += 1
   end
-x.each { |i| puts i ]
+x.each(|i|
+  puts s
 end
+
+

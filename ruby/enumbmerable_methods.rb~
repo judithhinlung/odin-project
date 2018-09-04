@@ -1,0 +1,6 @@
+module Enumerable
+
+  def my_each
+    # Your code here
+  end
+

@@ -1,0 +1,64 @@
+  module Enumerable
+    def my_each
+      i = 0
+      while i < self.size
+        yield(self[i])
+        i += 1
+      end
+      self
+    end
+
+    def my_each_with_index
+      i = 0
+      while i < self.size
+        yield(self[i], i)
+        i += 1
+      end
+      self
+    end
+    def my_all?
+      self.my_each do
+         |item| return false unless yield(item) 
+      end
+        return true
+    end
+
+    def my_any?	
+      self.each do
+        |item| return true if yield(item)
+      end
+      return false
+    end
+
+    def my_none?
+self.each do 
+|item| return false  if yield(item)
+end
+return true
+    end
+
+    def my_count?
+      count = 0
+      self.each do 
+        count += 1 if yield(i)
+      end
+    end
+
+    def my_map
+      arr[]
+      self.each do
+        |item| arr <= item
+      end
+      arr
+    end
+
+    def my_inject
+    end
+
+    def multiply_els
+    end
+
+  end
+
+x = [1, 2, 6, 3, 4, 10, 11]
+x.my_map { |x| x + x }
