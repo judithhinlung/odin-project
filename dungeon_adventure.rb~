@@ -1,0 +1,16 @@
+class Dungeon
+  attr_accessor :player
+
+
+  def initialize(player)
+    @player = player
+    @rooms = {}
+
+  end
+
+def add_room(reference, name, description, connections)
+  @rooms[reference] = Rooms.new(reference, name, description connections)
+
+  end
+  def start(location)
+    @player.location = location
