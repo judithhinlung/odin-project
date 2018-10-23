@@ -1,0 +1,15 @@
+def fibs(n)
+  a = []
+  a[0] = 0
+  a[1] = 1
+  if n <= 1
+    return n
+  end
+  i = 2
+  while i  <= n
+    a[i] = a[i-1] + a[i-2]
+    i +=1
+  end
+  return a[n]
+end
+fibs(2)
