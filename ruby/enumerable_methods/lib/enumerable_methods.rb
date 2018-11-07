@@ -76,3 +76,6 @@ end
 def multiply_els(x)
   puts x.my_inject { |result, x| result * x }
 end
+
+a = [1, 2, 3, 4, 5, 7, 9]
+a.my_each { |x| puts x * x }
