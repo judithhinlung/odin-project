@@ -1,4 +1,4 @@
-require './lib/calculator'  #=> add this
+require './lib/calculator'
 
 RSpec.describe Calculator do
   describe "#add" do
