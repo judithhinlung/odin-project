@@ -12,7 +12,7 @@ class Tic_tac_toe
     0.upto(9) do
       |i| @board << i
     end
-    @board[0] = "x" # Placeholder
+    @board[0] = 0
     return @board
   end
   # Display board

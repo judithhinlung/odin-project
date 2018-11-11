@@ -6,25 +6,25 @@ describe Tic_tac_toe do
 
   describe '#create_board' do
     it "creates the game board" do
-      expect(game.create_board).to eql([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+      expect(game.create_board).to eql(["x", 1, 2, 3, 4, 5, 6, 7, 8, 9])
     end
   end
 
   describe '#place' do
     it "Places token on specified square" do
       game.create_board
-      expect(game.place(4, "x")).to eql([0, 1, 2, 3, "x", 5, 6, 7, 8, 9])
+      expect(game.place(4, "x")).to eql(["x", 1, 2, 3, "x", 5, 6, 7, 8, 9])
     end
 
     it "Prevents a token from being placed on an occupied square" do
       game.create_board
       game.place(4, "x")
-      expect(game.place(4, "x")).to eql ([0, 1, 2, 3, "x", 5, 6, 7, 8, 9])
+      expect(game.place(4, "x")).to eql (["x", 1, 2, 3, "x", 5, 6, 7, 8, 9])
     end
 
     it "handles inappropriate numbers" do
       game.create_board
-      expect(game.place(12, "x")).to eql([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+      expect(game.place(12, "x")).to eql(["x", 1, 2, 3, 4, 5, 6, 7, 8, 9])
     end
   end
 
@@ -44,12 +44,12 @@ describe Tic_tac_toe do
 
   describe '#win_check' do
     it "Returns true if a player has three tokens in a row" do
-    board = [0, "x", 2, 3, "x", 5, 6, "x", 8, 9]
+    board = ["x", "x", 2, 3, "x", 5, 6, "x", 8, 9]
     expect(game.win_check("x", board)).to eql(true)
     end
 
     it "Returns false if a player does not have three tokens in a row" do
-    board = [0, "x", "o", "o", "x", "x", "o", "x", "o", "x"]
+    board = ["x", "x", "o", "o", "x", "x", "o", "x", "o", "x"]
     expect(game.win_check("o", board)).to eql(false)
     end
   end
